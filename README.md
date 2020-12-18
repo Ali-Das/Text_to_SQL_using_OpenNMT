@@ -12,9 +12,11 @@ Table of Contents
 
 
 ## Installation
-###The code is written in Python 3.5 and above.
+The code is written in Python 3.5 and above.
 
-###Install `OpenNMT-py` from `pip`:
+### Step I:Install `OpenNMT-py` :
+
+from `pip`:
 ```bash
 pip install OpenNMT-py
 ```
@@ -25,16 +27,16 @@ git clone https://github.com/OpenNMT/OpenNMT-py.git
 cd OpenNMT-py
 python setup.py install
 ```
-### You can install other dependency by running 
+### Step II: You can install other dependency by running 
 ```bash
 pip install -r requirements.opt.txt
 
 ```
 
-### Download the glove embedding.
+### Step III: Download the glove embedding.
 Download the pretrained glove embedding from [here](https://github.com/stanfordnlp/GloVe).
 
-### Downloading the WikiSQL dataset.
+### Step IV: Downloading the WikiSQL dataset.
 The WikiSQL dataset is already downloaded from [here](https://github.com/salesforce/WikiSQL) .
 From these files 'tokenized.dev.tables.jsonl', 'tokenized.test.tables.jsonl' and 'tokenized.train.tables.jsonl' have been generated and kept in the data/wikisql_data folder.
 
