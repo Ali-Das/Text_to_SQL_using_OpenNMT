@@ -106,7 +106,8 @@ After translation,the output pred.text file is converted to a text file that con
 Then queries of these two files are executed and compared to test the accuracy of the predicted model.
 
 ```bash
-python sqlgen.py
+python sqlgen.py data/text_files/tgt_test.txt data/wikisql_data/tokenized_test.tables.jsonl data/text_files/tgt_test_sql.txt
+python sqlgen.py data/text_files/pred.txt data/wikisql_data/tokenized_test.tables.jsonl data/text_files/pred_sql.txt
 python evaluate.py data/text_files/tgt_test_sql.txt data/wikisql_data/test.db data/text_files/pred_sql.txt
 ```
 
