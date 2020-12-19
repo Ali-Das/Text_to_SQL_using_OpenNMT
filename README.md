@@ -70,10 +70,15 @@ After running the preprocessing, the following files are generated and stored in
 Internally the system never touches the words themselves, but uses these indices.
 
 ### Step 3: Create Glove embedding to torch 
+
 ```bash 
 python tools/embeddings_to_torch.py -emb_file_both glove/glove.6B.100d.txt -dict_file venv/demo.vocab.pt -output_file data/embeddings
 ```
 
+After running the embeddings_to_torch.py, the following files are generated and stored in the data folder:
+
+* `embeddings.enc.pt`: serialized PyTorch file containing embeddings for encoder
+* `embeddings.dec.pt`: serialized PyTorch file containing embeddings for decoder
 ### Step 4: Train the model
 
 To train on CPU:
