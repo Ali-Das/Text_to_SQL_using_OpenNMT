@@ -107,7 +107,7 @@ python evaluate.py data/text_files/tgt-test_sql.txt data/wikisql_data/test.db da
 
 ## Alternative: Run on google colab
 If you want to train in GPU or your system is not good enough to train the model, you can use [google colab](https://colab.research.google.com/notebooks/intro.ipynb).
-upload the folder Text_to_SQL_using_OpenNMT to google drive. run the file 'Text_to_SQL_using_OpenNMT.ipynb'
+upload the folder Text_to_SQL_using_OpenNMT to google drive. Execute the notebook codes of the file 'Text_to_SQL_using_OpenNMT.ipynb'
 
 ## Citation
 
@@ -118,5 +118,5 @@ upload the folder Text_to_SQL_using_OpenNMT to google drive. run the file 'Text_
 The implementation is based on 
 [OpenNMT: Neural Machine Translation Toolkit](https://arxiv.org/pdf/1805.11462), 
 [WikiSQL dataset](https://github.com/salesforce/WikiSQL). 
-Please cite it too if you use this code.
+Please cite them too if you use this code.
 
