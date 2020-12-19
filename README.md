@@ -113,7 +113,7 @@ python evaluate.py data/text_files/tgt_test_sql.txt data/wikisql_data/test.db da
 
 ## Alternative: Run on google colab
 If you want to train in GPU or your system is not good enough to train the model, you can use [google colab](https://colab.research.google.com/notebooks/intro.ipynb).
-upload the folder Text_to_SQL_using_OpenNMT to google drive. Execute the notebook codes of the file 'Text_to_SQL_using_OpenNMT.ipynb'
+upload the folder Text_to_SQL_using_OpenNMT to google drive. Open the file 'Text_to_SQL_using_OpenNMT.ipynb' in google colaboratory and execute the notebook codes of the file.
 
 ## Citation
 
