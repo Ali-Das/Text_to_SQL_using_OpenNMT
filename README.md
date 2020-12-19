@@ -84,13 +84,13 @@ After running the embeddings_to_torch.py, the following files are generated and 
 To train on CPU:
 
 ```bash
-onmt_train -save_model data/model -batch_size 64 -layers 2 -rnn_size 500 -word_vec_size 500 -pre_word_vecs_enc data/embeddings/embeddings.enc.pt -pre_word_vecs_dec data/embeddings/embeddings.dec.pt -data data -world_size 1 -save_checkpoint_steps 10000 -report_every 5000   
+onmt_train -save_model data/model -batch_size 64 -layers 2 -rnn_size 500 -word_vec_size 500 -pre_word_vecs_enc data/embeddings.enc.pt -pre_word_vecs_dec data/embeddings.dec.pt -data data -world_size 1 -save_checkpoint_steps 10000 -report_every 5000   
 ```
 
 To train on GPU:
 
 ```bash
-onmt_train -save_model data/model -batch_size 64 -layers 2 -rnn_size 500 -word_vec_size 500 -pre_word_vecs_enc data/embeddings/embeddings.enc.pt -pre_word_vecs_dec data/embeddings/embeddings.dec.pt -data data -world_size 1 -gpu_ranks 0 -save_checkpoint_steps 10000 -report_every 5000 
+onmt_train -save_model data/model -batch_size 64 -layers 2 -rnn_size 500 -word_vec_size 500 -pre_word_vecs_enc data/embeddings.enc.pt -pre_word_vecs_dec data/embeddings.dec.pt -data data -world_size 1 -gpu_ranks 0 -save_checkpoint_steps 10000 -report_every 5000 
 ```
 The training parameters can be changed. Read [OpenNMT](http://opennmt.net/) for more information.
 
