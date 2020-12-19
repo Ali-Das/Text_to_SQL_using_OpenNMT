@@ -3,28 +3,23 @@ from onmt.library.query import Query
 import pandas as pd
 import nltk
 import difflib
-
+nltk.download('punkt')
+  
 class SqlGenUtil:
     """Class is responsible for converting output of NMT model to sql queries"""
 
     def __init__(self):
         pass
 
-    def build_sql_from_txt(self, dbfile, txtfile):
-        tables = pd.read_json("data/wikisql_data/tokenized_" + dbfile + ".tables.jsonl", lines=True)
+    def build_sql_from_txt(self, txtfile, dbfile, sqlfile):
+        tables = pd.read_json(dbfile, lines=True)
         # iterate over the queries and convert each one to plain text sql
-        file_plain_sql = "data/text_files/" + txtfile + ".txt"
-        fplsql = open(file_plain_sql, "r", encoding="utf-8")
-        file_wiki_sql = "data/Text_files/" + txtfile + "sql.txt"
-        fwikisql = open(file_wiki_sql, "w+", encoding="utf-8")
-        fplsql_contents = fplsql.readlines()
-        #filelen = len(predfplsql)
-        #no_of_iter = 0
-        for line in fplsql_contents:
-            """no_of_iter += 1
-            if no_of_iter > 75:
-                break"""
-
+        ftext = open(txtfile, "r", encoding="utf-8")
+        fsql = open(sqlfile, "w+", encoding="utf-8")
+        ftext_contents = ftext.readlines()
+      
+        for line in ftext_contents:
+            
             col_headers = []
             start = end = 0
             tokens = nltk.word_tokenize(line)
@@ -83,8 +78,7 @@ class SqlGenUtil:
             op = ['EQL', 'LT', 'LE', 'GT', 'GE']
             flag = 0
             tokens = nltk.word_tokenize(line)
-            #print("tokens:", tokens)
-            #indx = 0
+    
             for token in tokens:
               if (indx + 1) == len(tokens):
                 break
@@ -104,7 +98,6 @@ class SqlGenUtil:
                     indx = tokens.index('EQL')
                     if (indx + 2) == len(tokens):
                         if str(tokens[indx + 1]).isalpha():
-                            #print("alpha", tokens[indx + 1])
                             query += " \""
                             query += tokens[indx + 1]
                             query += "\""
@@ -112,7 +105,6 @@ class SqlGenUtil:
                         elif str(tokens[indx + 1]).isdigit():
                             query += " "
                             query += tokens[indx + 1]
-                            #print("digit", tokens[indx + 1])
                             break
                         else:
                             if str(tokens[indx + 1]).find(',') != -1:
@@ -167,17 +159,17 @@ class SqlGenUtil:
             if flag == 1:
                 query += "\""
                 flag = 0
-            #indx += 1
+            
             query = query.replace('FROM', "as result FROM")
             if query.find("= \" ") != -1:
                 query = query.replace("= \" ", "= \"").strip()
             else:
                 query = query.strip()
-            #print("query:", query)
-            fwikisql.write(query)
-            fwikisql.write("\n")
-        fplsql.close()
-        fwikisql.close()
+            
+            fsql.write(query)
+            fsql.write("\n")
+        ftext.close()
+        fsql.close()
 
     def divide_chunks(self, tokens, size):
         # Yield successive size-sized chunks from list.
