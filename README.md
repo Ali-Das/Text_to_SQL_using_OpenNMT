@@ -98,7 +98,7 @@ The training parameters can be changed. Read [OpenNMT](http://opennmt.net/) for 
 Now you have a model which you can use to predict on new data. We do this by running beam search. This will output predictions into `pred.txt`.
 
 ```bash
-onmt_translate -model data/model/model_step_100000.pt -src data/text_files/src-test.txt -tgt data/text_files/tgt-test.txt -output data/text_files/pred.txt
+onmt_translate -model data/model_step_100000.pt -src data/text_files/src_test.txt -tgt data/text_files/tgt_test.txt -output data/text_files/pred.txt
 ```
 
 ### Step 6: Evaluate
@@ -107,7 +107,7 @@ Then queries of these two files are executed and compared to test the accuracy o
 
 ```bash
 python sqlgen.py
-python evaluate.py data/text_files/tgt-test_sql.txt data/wikisql_data/test.db data/text_files/pred_sql.txt
+python evaluate.py data/text_files/tgt_test_sql.txt data/wikisql_data/test.db data/text_files/pred_sql.txt
 ```
 
 ## Alternative: Run on google colab
