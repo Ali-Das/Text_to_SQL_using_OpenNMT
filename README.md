@@ -6,7 +6,7 @@ Table of Contents
 =================
   * [Installation](#Installation)
   * [Quickstart](#quickstart)
-  * [Run on google colab](#run-on-google-colab)
+  * [Alternative: Run on google colab](#run-on-google-colab)
   * [Citation](#citation)
   * [Acknowledgement](#Acknowledgement)
 
