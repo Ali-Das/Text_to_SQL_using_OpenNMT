@@ -18,7 +18,7 @@ The code is written in Python 3.5 and above.
 
 from `pip`:
 ```bash
-pip install OpenNMT-py
+pip install OpenNMT-py==1.2.0
 ```
 
 or from the sources:
