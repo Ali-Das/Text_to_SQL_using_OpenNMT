@@ -119,7 +119,16 @@ upload the folder Text_to_SQL_using_OpenNMT to google drive. Open the file 'Text
 
 ## Citation
 
-> Alaka Das, Redefining Text-to-SQL Task as a Machine Translation problem
+> Alaka Das, "Redefining Text-to-SQL Task as a Machine Translation problem"
+
+> @InProceedings{10.1007/978-981-19-0098-3_14,
+author="Das, Alaka",
+title="Redefining Text-to-SQL Task as a Machine Translation Problem",
+booktitle="Information and Communication Technology for Competitive Strategies (ICTCS 2021)",
+publisher="Springer Nature Singapore",
+pages="131--138",
+isbn="978-981-19-0098-3"
+}
 
 ## Acknowledgement
 
