@@ -1,4 +1,4 @@
-## Text_to_SQL_using_OpenNMT: Redefining Text-to-SQL Task as a Machine Translation problem
+## Text_to_SQL_using_OpenNMT: [Redefining Text-to-SQL Task as a Machine Translation problem](https://link.springer.com/chapter/10.1007/978-981-19-0098-3_14)
 This repo provides an implementation of a model for predicting SQL queries on [WikiSQL dataset](https://github.com/salesforce/WikiSQL). 
 The open-source neural machine translation toolkit [OpenNMT](http://opennmt.net/) is used to train this model on a parallel corpora generated using WikiSQL dataset.
 
@@ -119,9 +119,9 @@ upload the folder Text_to_SQL_using_OpenNMT to google drive. Open the file 'Text
 
 ## Citation
 
-> Alaka Das, "Redefining Text-to-SQL Task as a Machine Translation problem"
+> Alaka Das, Redefining Text-to-SQL Task as a Machine Translation problem
 
-> @InProceedings{10.1007/978-981-19-0098-3_14,
+> @InProceedings{ 10.1007/978-981-19-0098-3_14 ,
 author="Das, Alaka",
 title="Redefining Text-to-SQL Task as a Machine Translation Problem",
 booktitle="Information and Communication Technology for Competitive Strategies (ICTCS 2021)",
